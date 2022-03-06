@@ -1,15 +1,14 @@
 <template>
-  <div class="loading">
-      <div class="loading-header"></div>
+  <div class="loading" v-if="loading">
+    <div class="loading-header"></div>
     <div class="loading-content">
       <div>
-        <div class="loading-logo">
-          <img src="~/assets/logo-text.svg" alt="logo" />
-        </div>
         <div class="loading-effect">
-            <div class="l2"></div>
-            <div class="l1"></div>
-            <div class="l"></div>
+          <span style="animation-delay: 0s"></span>
+          <span style="animation-delay: 0.2s"></span>
+          <span style="animation-delay: 0.4s"></span>
+          <span style="animation-delay: 0.6s"></span>
+          <span style="animation-delay: 0.8s"></span>
         </div>
       </div>
     </div>
@@ -18,90 +17,65 @@
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      loading: false
+    }
+  },
+  methods: {
+    start() {
+      this.loading = true
+    },
+    finish() {
+      this.loading = false
+    },
+  },
+}
 </script>
 
 <style>
-.loading-header{
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    background: url(~/assets/hw.svg) repeat-x;
-    background-size: contain;
-    height: 27px;
+.loading-effect {
+  position: relative;
+  margin-bottom: 50px;
+  color: #ffffff;
+  perspective: 400px;
+  -webkit-perspective: 400px;
 }
-.loading-effect{
-    margin: 20px auto;
-    height: 100px;
-    width: 100px;
-    position: relative;
-    margin-bottom: 50px;
+.loading-effect span {
+  width: 30px;
+  height: 30px;
+  background-color: #ffffff;
+  display: inline-block;
+  transform-style: preserve-3d;
+  animation: loading 5s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
 }
-.l{
-    position: absolute;
-    top: 50px;
-    left: 45px;
-    height: 10px;
-    width: 10px;
-    background: #ffffff;
-    transform: rotate(45deg);
-}
-.l1,.l2{
-    top: 20px;
-    left: 15px;
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    border: 5px solid #ffffff;
-}
-.l1{
-    background: #ff793f;
-    animation: l1 2s infinite cubic-bezier(0.19, 0.4, 0.46, 1.18);
-    transform: rotate(45deg);
-}
-.l2{
-    border-color: #ffffff;
-    animation: l2 2s infinite cubic-bezier(0.19, 0.4, 0.46, 1.18);
-}
-@keyframes l2{
-    0%{
-        transform: rotate(0deg);
-    }
-    80%{
-        transform: rotate(180deg);
-    }
-    100%{
-        transform: rotate(180deg);
-    }
-}
-@keyframes l1{
-    0%{
-        transform: rotate(45deg);
-    }
-    80%{
-        transform: rotate(-135deg);
-    }
-    100%{
-        transform: rotate(-135deg);
-    }
+@keyframes loading {
+  50% {
+    opacity: 0;
+    transform: perspective(400px) rotateY(180deg) scale(1.2);
+    -webkit-transform: perspective(400px) rotateY(180deg) scale(1.2);
+  }
+  100% {
+    transform: perspective(400px) rotateY(360deg);
+    -webkit-transform: perspective(400px) rotateY(360deg);
+    opacity: 1;
+  }
 }
 .loading {
-  background-color: #ff6c2e;
-  background-image: linear-gradient(#ffb100, #ff6c2e);
+  background-color: #ff4c00;
   position: fixed;
   width: 100%;
   height: 100%;
+  z-index: 10000;
+  left: 0;
+  top: 0;
 }
 .loading-content {
   display: flex;
   height: 100%;
   align-items: center;
   justify-content: center;
-}
-.loading-logo img {
-  height: 70px;
 }
 .loading-text {
   text-align: center;
