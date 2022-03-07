@@ -61,7 +61,7 @@
                   {{ m.info }}
                 </div>
                 <div class="home-member-item-footer">
-                  <div class="home-member-item-footer-btn">取得联系</div>
+                  <div class="home-member-item-footer-btn" @click="getinfo(key)">取得联系</div>
                 </div>
               </div>
             </div>
@@ -69,6 +69,7 @@
         </div>
       </div>
     </div>
+    <s-dialog v-model="m_dialog" animation="zoom"> 12121 </s-dialog>
     <div class="box">
       <div>
         <div class="headline">最近在干什么</div>
@@ -89,9 +90,18 @@
       </div>
     </div>
     <div class="home-join">
-      <div class="home-join-btn">加入我们</div>
+      <div class="home-join-bg" :class="bg?'home-join-bg_a':''"></div>
+      <div class="home-join-btn" @mouseenter="bg=true" @mouseleave="bg=false">加入我们</div>
     </div>
-    <div class="footer"></div>
+    <div class="footer">
+      <div class="footer-content">
+        <div class="footer-left"></div>
+        <div class="footer-right">.footer</div>
+      </div>
+      <div class="footer-bottom">
+        © 2022. All Rights Reserved.曈星阁 版权所有
+      </div>
+    </div>
   </div>
 </template>
 <style>
@@ -117,11 +127,13 @@ export default Vue.extend({
   },
   data() {
     return {
+      m_dialog: false,
       swiperOption_member: {
         loop: false,
         autoplay: 3000,
         slidesPerView: 1,
       },
+      bg:false,
       swiperOption_notice: {
         effect: 'cards',
         loop: false,
@@ -130,6 +142,7 @@ export default Vue.extend({
       },
       loadingOver: false,
       im: false,
+      member_info:{},
       e_active: -1,
       mx: 0,
       mode_items: [
@@ -199,8 +212,8 @@ export default Vue.extend({
   mounted() {
     window.onresize = () => {
       return (() => {
-        this.s_width = document.body.clientWidth;
-        this.swiperOption_member.slidesPerView = Math.floor(this.s_width / 300);
+        this.s_width = document.body.clientWidth
+        this.swiperOption_member.slidesPerView = Math.floor(this.s_width / 300)
       })()
     }
   },
@@ -211,6 +224,10 @@ export default Vue.extend({
     }
   },
   methods: {
+    getinfo(key){
+      this.member_info=this.members[key];
+      this.m_dialog=true;
+    }
   },
 })
 </script>

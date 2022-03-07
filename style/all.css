@@ -52,3 +52,15 @@ body {
     font-family: "思源宋体";
     color: #ffffffcc;
 }
+
+.footer-content {
+    padding: 50px;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 14px;
+    padding: 10px;
+    color: #ffffffcc;
+    background-color: #3d3b4f;
+}

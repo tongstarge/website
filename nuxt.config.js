@@ -18,12 +18,13 @@ export default {
 
     // Global CSS: https://go.nuxtjs.dev/config-css
     css: [
-        'swiper/dist/css/swiper.min.css', '~/style/all.css'
+        'swiper/css/swiper.min.css', '~/style/all.css'
     ],
 
     // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
     plugins: [
-        { src: "@plugins/vue-swiper.js", ssr: false }
+        { src: "@plugins/vue-swiper.js", ssr: false },
+        { src: "@plugins/tsgUI/use.js", ssr: false },
     ],
 
     // Auto import components: https://go.nuxtjs.dev/config-components
