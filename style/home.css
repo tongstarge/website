@@ -142,6 +142,8 @@
     height: 400px;
     background-color: #d3b17d;
     border-radius: 20px;
+    box-shadow: 0 10px 40px #9b9b9b;
+    margin: 30px;
 }
 
 .home-notice-item {

@@ -61,7 +61,12 @@
                   {{ m.info }}
                 </div>
                 <div class="home-member-item-footer">
-                  <div class="home-member-item-footer-btn" @click="getinfo(key)">取得联系</div>
+                  <div
+                    class="home-member-item-footer-btn"
+                    @click="getinfo(key)"
+                  >
+                    取得联系
+                  </div>
                 </div>
               </div>
             </div>
@@ -86,12 +91,19 @@
               </div>
             </div>
           </div>
+          <div class="swiper-pagination"></div>
         </div>
       </div>
     </div>
     <div class="home-join">
-      <div class="home-join-bg" :class="bg?'home-join-bg_a':''"></div>
-      <div class="home-join-btn" @mouseenter="bg=true" @mouseleave="bg=false">加入我们</div>
+      <div class="home-join-bg" :class="bg ? 'home-join-bg_a' : ''"></div>
+      <div
+        class="home-join-btn"
+        @mouseenter="bg = true"
+        @mouseleave="bg = false"
+      >
+        加入我们
+      </div>
     </div>
     <div class="footer">
       <div class="footer-content">
@@ -133,16 +145,19 @@ export default Vue.extend({
         autoplay: 3000,
         slidesPerView: 1,
       },
-      bg:false,
+      bg: false,
       swiperOption_notice: {
         effect: 'cards',
         loop: false,
         autoplay: false,
         slidesPerView: 1,
+        pagination: {
+          el: '.swiper-pagination',
+        },
       },
       loadingOver: false,
       im: false,
-      member_info:{},
+      member_info: {},
       e_active: -1,
       mx: 0,
       mode_items: [
@@ -224,10 +239,10 @@ export default Vue.extend({
     }
   },
   methods: {
-    getinfo(key){
-      this.member_info=this.members[key];
-      this.m_dialog=true;
-    }
+    getinfo(key) {
+      this.member_info = this.members[key]
+      this.m_dialog = true
+    },
   },
 })
 </script>
