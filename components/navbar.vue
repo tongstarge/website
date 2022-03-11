@@ -2,7 +2,7 @@
   <header class="navbar">
     <div class="navbar-content">
       <div class="navbar-logo">
-        <img :src="require('../assets/logo-text.svg')" alt="logo" />
+        <img style="height:34px" :src="require('../assets/logo-text.svg')" alt="logo" />
       </div>
       <div class="spacer"></div>
       <ul class="navbar-nav">
@@ -38,7 +38,6 @@ export default {}
   height: 100%;
 }
 .navbar-logo {
-  display: flex;
   height: 34px;
 }
 .spacer {
