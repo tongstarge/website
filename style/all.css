@@ -31,7 +31,7 @@ body {
 }
 
 .box {
-    padding: 50px;
+    padding: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -53,6 +53,8 @@ body {
     color: #ffffffcc;
 }
 
+
+/* 
 .footer-content {
     padding: 50px;
 }
@@ -63,4 +65,4 @@ body {
     padding: 10px;
     color: #ffffffcc;
     background-color: #3d3b4f;
-}
+} */
