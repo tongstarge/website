@@ -13,7 +13,7 @@
         <div class="footer-other">
           <div class="footer-other-item">
             <a
-              href="https://space.bilibili.com/444138308?from=search&seid=3399642198415679525"
+              href="https://space.bilibili.com/1979288592"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -25,7 +25,7 @@
           </div>
           <div class="footer-other-item">
             <a
-              href="https://qm.qq.com/cgi-bin/qm/qr?k=nT-42kovrX3KEPoiwo8DlERw27LGmBUu&jump_from=webapi"
+              href=""
               target="_blank"
               rel="noopener noreferrer"
             >
