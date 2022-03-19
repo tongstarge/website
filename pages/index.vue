@@ -106,7 +106,7 @@
         </div>
       </div>
       <div class="home-tip" :style="'background-position-y: -'+scrollTop*0.1+'px;'">
-        <div class="home-tip-content" v-show="s" @click="newTip">
+        <div class="home-tip-content" v-show="tip_show" @click="newTip">
           {{ tip[tipkey] }}
         </div>
       </div>
@@ -148,9 +148,10 @@ export default {
         '因志趣相投而相遇，因共怀梦想而相聚',
         '归星，聚星，合星，耀星，曈星',
         '不要看到前方的路远远望不到尽头就感到害怕，你只需要看向脚下，一步一步的往前走便是，总有一天你会走到那的！',
+        '人类的悲欢并不相通，但是我们能分享创造的喜悦。'
       ],
       tipkey: 0,
-      s: false,
+      tip_show: false,
       swiperOption_member: {
         observer: true,
         observeParents: true,
@@ -246,12 +247,22 @@ export default {
   },
   methods: {
     newTip() {
-      this.s = false
-      let min = 0
-      let max = this.tip.length - 1
-      this.tipkey = parseInt(Math.random() * (max - min + 1) + min, 10)
+      // 将tip隐藏
+      this.tip_show = false
+
+      // 更新tip
+      this.tipkey += 1
+
+      // 如果已经到了最底部，打乱数组
+      if(this.tipkey >= this.tip.length-1){
+        this.tip.sort(function(){
+          return (0.5-Math.random())
+        })
+        this.tipkey = 0
+      }
+
       setTimeout(() => {
-        this.s = true
+        this.tip_show = true
       }, 100)
     },
     getTop() {
