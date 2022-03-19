@@ -7,7 +7,7 @@ const components = [
     Button,
     Input,
     Dialog,
-    Line
+    Line,
 ]
 const install = function(Vue) {
     components.forEach(component => {

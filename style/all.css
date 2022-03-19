@@ -5,10 +5,11 @@
 
 *::-webkit-scrollbar {
     width: 10px;
+    height: 10px;
 }
 
 *::-webkit-scrollbar-thumb {
-    background-color: #d0d0d0;
+    background-color: #c7c7c7;
     border-radius: 5px;
 }
 
@@ -22,8 +23,8 @@ body {
 }
 
 .topbox {
-    padding:30px 0;
-    min-height: 600px;
+    padding: 30px 0;
+    min-height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -31,7 +32,7 @@ body {
 }
 
 .box {
-    padding: 100px;
+    padding: 100px 0 150px 0;
     display: flex;
     align-items: center;
     justify-content: center;

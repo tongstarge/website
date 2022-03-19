@@ -18,7 +18,7 @@ export default {
 
     // Global CSS: https://go.nuxtjs.dev/config-css
     css: [
-        'swiper/css/swiper.min.css', '~/style/all.css'
+        'swiper/dist/css/swiper.min.css', '~/style/all.css'
     ],
 
     // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -30,7 +30,7 @@ export default {
     // Auto import components: https://go.nuxtjs.dev/config-components
     components: true,
 
-    loading: './components/loading.vue',
+    // loading: './components/loading.vue',
 
     // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
     buildModules: [

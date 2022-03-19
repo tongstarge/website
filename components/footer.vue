@@ -1,40 +1,66 @@
 <template>
   <div class="footer">
     <div class="footer-box">
-      <div class="footer-item" v-for="(f, key) in footer_items" :key="key">
-        <div class="footer-item-h">{{ f.headline }}</div>
-        <div class="footer-item-p" v-for="(fp, k) in f.items" :key="k">
-          <a :href="fp.url" target="_blank" rel="noopener noreferrer">
-            {{ fp.text }}
-          </a>
-        </div>
-      </div>
-      <div class="footer-item">
-        <div class="footer-other">
-          <div class="footer-other-item">
-            <a
-              href="https://space.bilibili.com/1979288592"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                class="footer-other-item-icon"
-                :src="require('../assets/bilibili.svg')"
-              />
+      <div class="footer-item-box">
+        <div class="footer-item" v-for="(f, key) in footer_items" :key="key">
+          <div class="footer-item-h">{{ f.headline }}</div>
+          <div class="footer-item-p" v-for="(fp, k) in f.items" :key="k">
+            <a :href="fp.url" target="_blank" rel="noopener noreferrer">
+              {{ fp.text }}
             </a>
           </div>
-          <div class="footer-other-item">
-            <a
-              href=""
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                style="width: 30px; margin-top: 35px; height: 30px"
-                class="footer-other-item-icon"
-                :src="require('../assets/qq.svg')"
-              />
-            </a>
+        </div>
+      </div>
+      <div class="footer-item-box">
+        <div class="footer-item">
+          <div class="footer-other">
+            <div class="footer-other-item">
+              <a
+                href="https://space.bilibili.com/1979288592"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  class="footer-other-item-icon"
+                  :src="require('../assets/bilibili.svg')"
+                />
+              </a>
+            </div>
+            <div class="footer-other-item">
+              <a
+                href="mailto:tutu@tongstarge.cn"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  class="footer-other-item-icon"
+                  :src="require('../assets/mail.svg')"
+                />
+              </a>
+            </div>
+            <div class="footer-other-item">
+              <a>
+                <img
+                  class="footer-other-item-icon"
+                  style="width: 40px"
+                  :src="require('../assets/qq.svg')"
+                />
+                <div class="footer-other-item-icontent">
+                  <img :src="require('../assets/qqurl.png')" />
+                </div>
+              </a>
+            </div>
+            <div class="footer-other-item">
+              <a>
+                <img
+                  class="footer-other-item-icon"
+                  :src="require('../assets/weixin.svg')"
+                />
+                <div class="footer-other-item-icontent">
+                  <img :src="require('../assets/weixinurl.png')" />
+                </div>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -90,7 +116,8 @@ export default {
   text-align: center;
 }
 .footer-box {
-  padding: 5vw 20vh;
+  padding: 50px;
+  display: flex;
 }
 .footer-item {
   display: inline-block;
@@ -102,13 +129,10 @@ export default {
   .footer-item {
     display: block !important;
     text-align: center !important;
-    padding: 0 !important;
+    padding: 20px 0 !important;
   }
   .footer-box {
     padding: 5vh 2vw;
-  }
-  .footer-other-item {
-    width: 80vw !important;
     display: block !important;
   }
 }
@@ -117,12 +141,12 @@ export default {
   font-family: '思源宋体';
   font-weight: 800;
   margin-bottom: 15px;
-  font-size: 17px;
+  font-size: 20px;
 }
 .footer-item-p {
   color: #50616d99;
   transition: 0.2s;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 30px;
   cursor: pointer;
 }
@@ -133,30 +157,49 @@ export default {
   text-decoration: none;
   color: inherit;
 }
-.footer-other {
-  border-left: 1px solid #50616dcc;
-  padding-left: 20px;
-}
 .footer-other-item-icon {
   width: 50px;
   height: 50px;
-  line-height: 100px;
   display: inline-block;
+  padding: 10px;
   vertical-align: top;
   color: #fff !important;
 }
 .footer-other-item {
+  position: relative;
   color: #bbb;
-  width: 100px;
   text-align: center;
-  height: 100px;
   display: inline-block;
   vertical-align: top;
 }
-.footer-other-item-icon {
-  width: 40px;
-  margin-top: 30px;
-  height: 40px;
+.footer-other-item a {
+  cursor: pointer;
+}
+.footer-other-item-icontent {
+  position: absolute;
+  top: -130px;
+  left: 50%;
+  margin-left: -65px;
+  width: 130px;
+  height: 130px;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #ffffff;
+  visibility: hidden;
+  transition: 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  transform: translateY(20px) scale(0.8);
+  opacity: 0;
+}
+.footer-other-item-icontent img {
+  width: 120px;
+  height: 120px;
+  margin: 5px;
+}
+.footer-other-item a:hover .footer-other-item-icontent {
+  visibility: visible;
+  transform: translateY(0) scale(1);
+  opacity: 1;
+  z-index: 100;
 }
 .footer-bottom {
   text-align: center;
@@ -164,5 +207,8 @@ export default {
   padding: 10px;
   color: #ffffffcc;
   background-color: #3d3b4f;
+}
+.footer-item-box{
+  flex-grow: 1;
 }
 </style>

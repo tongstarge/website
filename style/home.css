@@ -17,6 +17,7 @@
     width: 50%;
     text-align: center;
     box-sizing: border-box;
+    transition: .3s ease-in-out;
 }
 
 .home-mode-item::-webkit-scrollbar {
@@ -165,45 +166,37 @@
     color: #ffffffb9;
 }
 
-.home-join {
+.home-tip {
+    box-shadow: inset 0 0 100px #353535;
     padding: 50px;
+    height: 1000px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #ee5522;
     position: relative;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='133' height='133' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='100' y1='33' x2='100' y2='-3'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='100' y1='135' x2='100' y2='97'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='%23d23d09' fill-opacity='0.18'%3E%3Crect x='100' width='100' height='100'/%3E%3Crect y='100' width='100' height='100'/%3E%3C/g%3E%3Cg fill-opacity='0.18'%3E%3Cpolygon fill='url(%23a)' points='100 30 0 0 200 0'/%3E%3Cpolygon fill='url(%23b)' points='100 100 0 130 0 100 200 100 200 130'/%3E%3C/g%3E%3C/svg%3E");
+    background-image: url("https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimgstore.cdn.sogou.com%2Fapp%2Fa%2F100540002%2F398203.jpg&refer=http%3A%2F%2Fimgstore.cdn.sogou.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1650285645&t=a9a32741f795a39cae519116bddf3e73");
     background-attachment: fixed;
+    background-size: 2000px;
+    background-position-x: center;
 }
 
-.home-join-btn {
-    padding: 15px 30px;
-    border: 1px solid #50616d;
-    color: #50616d;
-    border-radius: 30px;
+.home-tip-content {
+    font-size: 20px;
+    color: #ffffffbb;
+    font-family: '思源宋体';
+    font-weight: 700;
     cursor: pointer;
-    transition: .3s;
-    z-index: 12;
+    position: sticky;
+    animation: tip .3s ease-out;
 }
 
-.home-join-btn:hover {
-    background-color: #ffc000;
-    border-color: #ffc000;
-    color: #ffffff;
-}
-
-.home-join-bg {
-    transition: .5s ease-in-out;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    z-index: 0;
-    background-color: #00000055;
-    opacity: 0;
-}
-
-.home-join-bg_a {
-    opacity: 1;
+@keyframes tip {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
