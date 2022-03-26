@@ -137,7 +137,7 @@ export default {
   components: {
     Navbar,
     Footer,
-    music
+    music,
   },
   data() {
     return {
