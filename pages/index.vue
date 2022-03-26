@@ -10,6 +10,7 @@
           <div class="text">一群少年向着梦想前进(介绍)</div>
         </div>
         <div class="s"></div>
+        <music></music>
       </div>
       <div class="box">
         <div>
@@ -129,12 +130,14 @@
 <script>
 import Navbar from '../components/navbar.vue'
 import Footer from '../components/footer.vue'
+import music from '../components/music.vue'
 
 export default {
   name: 'IndexPage',
   components: {
     Navbar,
     Footer,
+    music
   },
   data() {
     return {
