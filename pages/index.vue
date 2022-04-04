@@ -7,7 +7,7 @@
           <div class="headline" style="color: #ffffff; padding-bottom: 30px">
             曈星阁
           </div>
-          <div class="text">一群少年向着梦想前进(介绍)</div>
+          <div class="text">因志趣相投而相遇，因共怀梦想而相聚</div>
         </div>
         <div class="s"></div>
       </div>
@@ -105,7 +105,10 @@
           </div>
         </div>
       </div>
-      <div class="home-tip" :style="'background-position-y: -'+scrollTop*0.1+'px;'">
+      <div
+        class="home-tip"
+        :style="'background-position-y: -' + scrollTop * 0.1 + 'px;'"
+      >
         <div class="home-tip-content" v-show="s" @click="newTip">
           {{ tip[tipkey] }}
         </div>
@@ -118,11 +121,11 @@
 @import url(../style/home.css);
 .s {
   position: absolute;
-  width: 100px;
+  width: 100%;
   left: 0;
   top: 50%;
   height: 30px;
-  background: url(../assets//hw.svg) repeat-x;
+  background: url(../assets/cloud.svg) repeat-x;
   background-size: contain;
 }
 </style>
@@ -173,17 +176,18 @@ export default {
         {
           name: '主阁',
           introduce:
-            '详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍详细介绍',
+            '许许多多不同兴趣爱好的相聚在一起，讨论交流亦或是单纯的聊天娱乐。经常会举行一些有趣的活动',
           group_n: 517060062,
           color: '#ffc000',
         },
         {
           name: '源界',
-          introduce: '详细介绍',
-          group_n: 517060062,
+          introduce: '曈星阁的技术团，专门讨论编程技术的地方（涉及web、软件、信息技术竞赛、硬件……领域）',
+          group_n: 1040999292,
           color: '#1280ff',
         },
-        { name: '源界', introduce: '详细介绍', group_n: 517060062 },
+        { name: '同议编辑院', introduce: '一同商议', group_n: 711258979 },
+        { name: '绘画家协会', introduce: '', group_n: 607188291 },
       ],
       members: [
         {
@@ -193,22 +197,22 @@ export default {
           to:"https://space.bilibili.com/473020111/"
         },
         {
-          name: 'Lai追求',
-          info: '曈星阁创始人\n想法特别多，手\n擅长前端开发（这个网站就是他开发的）',
-          qq_number: '123632704',
+          name: '熙熙xiyxiy',
+          info: '曈星阁副总管，擅长窜写文案。',
+          qq_number: '2658730880',
           to:"https://space.bilibili.com/473020111/"
         },
         {
-          name: 'Lai追求',
-          info: '曈星阁创始人\n想法特别多，曈星阁策划基本上都出自他手\n擅长前端开发（这个网站就是他开发的）',
-          qq_number: '123632704',
-          to:"https://space.bilibili.com/473020111/"
+          name: '海藻酸钠',
+          info: '曈星创始人之一，经常摸鱼，曈星阁的设计部分基本都是他干的，曾经改了3次曈星阁的logo',
+          qq_number: '3409473369',
+          to:"https://www.yuque.com/hzsn"
         },
         {
-          name: 'Lai追求',
-          info: '别多，曈星阁策划基本上都出自他手\n擅长前端开发（这个网站就是他开发的）',
-          qq_number: '123632704',
-          to:"https://space.bilibili.com/473020111/"
+          name: '晓梦DawnDream',
+          info: '会java、c++、python等多种编程语言，编曲、unity游戏开发也有相应的经验！',
+          qq_number: '1040545078',
+          to:"https://www.github.com/Dawn-Dream"
         },
         {
           name: 'Lai追求',
@@ -218,7 +222,7 @@ export default {
         },
       ],
       notices: [
-        { title: '2022新计划', content: '2022了，我们要搞个计划' },
+        { title: '2022新计划', content: '2022又是新的一年，我们将全力以赴。曈星阁官网、源界、learn、曈星阁家园、曈星阁动画、曈星阁小故事集合……给我干起来吧！' },
         { title: '2022新计划', content: '2022了，我们要搞个计划' },
       ],
       show_Positions: [],

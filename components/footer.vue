@@ -94,14 +94,14 @@ export default {
               text: '曈星阁家园',
               url: 'https://www.tongstarge.com',
             },
-            /** {
+            {
               text: '源界',
               url: 'https://yc.tongstarge.cn',
             },
             {
-              text: '自学直达',
+              text: 'learn',
               url: 'https://learn.tongstarge.cn',
-            },**/
+            },
           ],
         },
       ],

@@ -29,6 +29,7 @@ body {
     align-items: center;
     justify-content: center;
     background-color: #ff5100;
+    overflow: hidden;
 }
 
 .box {

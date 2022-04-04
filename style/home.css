@@ -176,8 +176,14 @@
     position: relative;
     background-image: url("https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimgstore.cdn.sogou.com%2Fapp%2Fa%2F100540002%2F398203.jpg&refer=http%3A%2F%2Fimgstore.cdn.sogou.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1650285645&t=a9a32741f795a39cae519116bddf3e73");
     background-attachment: fixed;
-    background-size: 2000px;
+    background-size: 150vw;
     background-position-x: center;
+}
+
+@media screen and (max-width:900px) {
+    .home-tip {
+        background-size: 150vh !important;
+    }
 }
 
 .home-tip-content {
@@ -187,16 +193,16 @@
     font-weight: 700;
     cursor: pointer;
     position: sticky;
-    animation: tip .3s ease-out;
+    animation: tip .5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }
 
 @keyframes tip {
     0% {
-        transform: translateY(50px);
+        transform: translateY(20px) scale(0.8);
         opacity: 0;
     }
     100% {
-        transform: translateY(0);
+        transform: translateY(0) scale(1);
         opacity: 1;
     }
 }
