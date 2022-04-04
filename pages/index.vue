@@ -51,6 +51,7 @@
           <div
             v-swiper:mySwiper_member="swiperOption_member"
             class="home-member"
+            title="排名不分先后，是随机打乱的"
           >
             <div class="swiper-wrapper">
               <div class="swiper-slide" v-for="(m, key) in members" :key="key">
@@ -233,9 +234,15 @@ export default {
         },
         {
           name: '小阳',
-          info: '虽然web开发技术不怎么样，但是却<b>有丰富的运营经验</b>。小阳的加入推动了曈星阁跨入了新时代！',
+          info: '外号：阳小欠儿<br/>虽然web开发技术不怎么样，但是却<b>有丰富的运营经验</b>。小阳的加入推动了曈星阁跨入了新时代！',
           qq_number: '3197005320',
           to: 'https://www.page2.cn/',
+        },
+        {
+          name: '可可本可',
+          info: '小阳的助手，负责处理曈星阁的法务相关事务。更多的还是来曈星阁了解吧~(/▽＼)',
+          qq_number: '2357211881',
+          to: '',
         },
         {
           name: '喵茶九尾',
@@ -257,7 +264,7 @@ export default {
         },
         {
           name: 'or1=1',
-          info: '<b>源界技术大佬</b>，源界镇界之宝（镇阁之宝是追求( ‵▽′)ψ）<br/>擅长php、网络安全、硬件，有非常丰富计算机编程经验。（至少在我们阁里面是深不可测的实力',
+          info: '<b>源界技术大佬</b>，源界镇界之宝（镇阁之宝是追求( ‵▽′)ψ）<br/>擅长php、网络安全、硬件、法律，有非常丰富计算机编程经验。（至少在我们阁里面是深不可测的实力',
           qq_number: '2805721375',
           to: 'https://github.com/or1equ1',
         },
