@@ -8,7 +8,7 @@
       return {
         // 音乐iframe
         musics: [
-          `<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=155 height=52 src="//music.163.com/outchain/player?type=3&id=2495543677&auto=0&height=32"></iframe>`,
+          `<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=155 height=52 src="//music.163.com/outchain/player?type=2&id=1924246096&auto=0&height=32"></iframe>`,
           `<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=155 height=52 src="//music.163.com/outchain/player?type=3&id=2495534760&auto=0&height=32"></iframe>`,
           `<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=155 height=52 src="//music.163.com/outchain/player?type=3&id=2495584710&auto=0&height=32"></iframe>`
         ],

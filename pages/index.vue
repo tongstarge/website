@@ -9,7 +9,7 @@
           </div>
           <div class="text">因志趣相投而相遇，因共怀梦想而相聚</div>
         </div>
-        <div class="s"></div>
+        <div class="s" title="正在设计，请不要着急，谢谢！"></div>
         <music></music>
       </div>
       <div class="box">
@@ -66,9 +66,7 @@
                   <div class="home-member-item-name">
                     {{ m.name }}
                   </div>
-                  <div class="home-member-item-info">
-                    {{ m.info }}
-                  </div>
+                  <div class="home-member-item-info" v-html="m.info"></div>
                   <div class="home-member-item-footer">
                     <div
                       class="home-member-item-footer-btn"
@@ -96,9 +94,10 @@
                   <div class="home-notice-item-title">
                     {{ n.title }}
                   </div>
-                  <div class="home-notice-item-content">
-                    {{ n.content }}
-                  </div>
+                  <div
+                    class="home-notice-item-content"
+                    v-html="n.content"
+                  ></div>
                 </div>
               </div>
             </div>
@@ -106,7 +105,11 @@
           </div>
         </div>
       </div>
-      <div class="home-tip" :style="'background-position-y: -'+scrollTop*0.1+'px;'">
+      <div
+        class="home-tip"
+        :style="'background-position-y: -' + scrollTop * 0.1 + 'px;'"
+        title="图片来源于网络，如有侵权请联系我们，谢谢！"
+      >
         <div class="home-tip-content" v-show="tip_show" @click="newTip">
           {{ tip[tipkey] }}
         </div>
@@ -119,7 +122,7 @@
 @import url(../style/home.css);
 .s {
   position: absolute;
-  width: 100%;
+  width: 100px;
   left: 0;
   top: 50%;
   height: 30px;
@@ -151,7 +154,7 @@ export default {
         '因志趣相投而相遇，因共怀梦想而相聚',
         '归星，聚星，合星，耀星，曈星',
         '不要看到前方的路远远望不到尽头就感到害怕，你只需要看向脚下，一步一步的往前走便是，总有一天你会走到那的！',
-        '人类的悲欢并不相通，但是我们能分享创造的喜悦。'
+        '人类的悲欢并不相通，但是我们能分享创造的喜悦。',
       ],
       tipkey: 0,
       tip_show: false,
@@ -183,7 +186,8 @@ export default {
         },
         {
           name: '源界',
-          introduce: '曈星阁的技术团，专门讨论编程技术的地方（涉及web、软件、信息技术竞赛、硬件……领域）',
+          introduce:
+            '曈星阁的技术团，专门讨论编程技术的地方（涉及web、软件、信息技术竞赛、硬件……领域）',
           group_n: 1040999292,
           color: '#1280ff',
         },
@@ -193,38 +197,96 @@ export default {
       members: [
         {
           name: 'Lai追求',
-          info: '曈星阁创始人\n想法特别多，曈星阁策划基本上都出自他手\n擅长前端开发（这个网站就是他开发的）',
+          info: '曈星阁创始人之一，现任总管/曈帝。<b>想法/创意多多</b>。<b>擅长前端开发</b>,曈星阁web开发团队的主力之一。兴趣爱好广泛……内容太多了，请前往曈星阁了解详细(*￣▽￣*)',
           qq_number: '123632704',
-          to:"https://space.bilibili.com/473020111/"
+          to: 'https://space.bilibili.com/473020111/',
         },
         {
           name: '熙熙xiyxiy',
-          info: '曈星阁副总管，擅长窜写文案。',
+          info: '曈星阁副总管，<b>擅长窜写文案</b>。<br/>究极死宅，二次元手游重患。<b>原神56级，崩坏三68级</b>……ψ(｀∇´)ψ',
           qq_number: '2658730880',
-          to:"https://space.bilibili.com/473020111/"
+          to: 'https://space.bilibili.com/660196687',
         },
         {
           name: '海藻酸钠',
-          info: '曈星创始人之一，经常摸鱼，曈星阁的设计部分基本都是他干的，曾经改了3次曈星阁的logo',
+          info: '曈星创始人之一，<b>擅长设计UI</b>。曈星阁的设计部分基本都是他干的——曈星阁logo、源界的logo、曈星阁的颜色的规范……<br/>兴趣爱好：摸鱼（？）',
           qq_number: '3409473369',
-          to:"https://www.yuque.com/hzsn"
+          to: 'https://www.yuque.com/hzsn',
+        },
+        {
+          name: 'FanUCK',
+          info: '翻译、音游狗、homo小鬼、像素画师、业余演说家、小说家、思想控制者，是歌姬吧，打五把csgo。<b>不要再打错我名字的大小写了！</b> ',
+          qq_number: '2920312856',
+          to: 'https://b23.tv/JEylHfp',
         },
         {
           name: '晓梦DawnDream',
-          info: '会java、c++、python等多种编程语言，编曲、unity游戏开发也有相应的经验！',
+          info: '<b>java（最擅长的）</b>、c++、python等多种编程语言都被他……(￣y▽,￣)╭ （就是都很会用的意思）',
           qq_number: '1040545078',
-          to:"https://www.github.com/Dawn-Dream"
+          to: 'https://www.github.com/Dawn-Dream',
         },
         {
-          name: 'Lai追求',
-          info: '曈星阁创始人\n想法特别多，曈星阁策划基本上都出自他手\n擅长前端开发（这个网站就是他开发的）',
-          qq_number: '123632704',
-          to:"https://space.bilibili.com/473020111/"
+          name: '土土',
+          info: '曈星阁的人事管理，为曈星阁招募到了许多新成员，<b>是曈星阁转变的关键性人物！</b><br/>会前端开发和python。<br/>furry爱好者',
+          qq_number: '2093142951',
+          to: 'https://www.tutime.cn',
+        },
+        {
+          name: '小阳',
+          info: '虽然web开发技术不怎么样，但是却<b>有丰富的运营经验</b>。小阳的加入推动了曈星阁跨入了新时代！',
+          qq_number: '3197005320',
+          to: 'https://www.page2.cn/',
+        },
+        {
+          name: '喵茶九尾',
+          info: '<b>曈星阁绘画家协会会长</b>，曈星阁的吉祥物和其他角色的设计都出自她手。<br/>兴趣爱好嘛，当然是绘画了呀！',
+          qq_number: '3353857668',
+          to: 'https://space.bilibili.com/670277332',
+        },
+        {
+          name: '箱子-BOX',
+          info: '<b>游戏制作者之一</b>，会用Scratch和Gamemaker8制作游戏，会视频剪辑，擅长摄影、采访，Godot学习中……热门冷门游戏都爱玩，成分很杂的融合怪(^o^)/~',
+          qq_number: '1509639704',
+          to: 'https://space.bilibili.com/359876245',
+        },
+        {
+          name: '小苏打',
+          info: '<b>曈星阁web开发组成员之一</b>，擅长的自然是web开发啊。<br/>正在努力学习新技术！',
+          qq_number: '2677373701',
+          to: "javascript: alert('此人已隐身，无法拜访！(*/ω＼*)'); void(0);",
+        },
+        {
+          name: 'or1=1',
+          info: '<b>源界技术大佬</b>，源界镇界之宝（镇阁之宝是追求( ‵▽′)ψ）<br/>擅长php、网络安全、硬件，有非常丰富计算机编程经验。（至少在我们阁里面是深不可测的实力',
+          qq_number: '2805721375',
+          to: 'https://github.com/or1equ1',
+        },
+        {
+          name: 'DDoS_LING',
+          info: '专注于研究网络安全、Minecraft Java Server、Flask，拥有丰富的运维经验。爱好Minecraft、Python、硬件、剪辑、摄影。与or1=1并称“曈星阁源界二佬”',
+          qq_number: '1928668616',
+          to: 'https://ddos-ling.top/',
+        },
+        {
+          name: 'encryption',
+          info: '<b>网络安全员</b>。会python，C，Java(会一点点点)，kali。喜欢/狗头（不是）',
+          qq_number: '3618142439',
+          to: 'https://v.douyin.com/NbYYTmK/',
+        },
+        {
+          name: '传闻中的蟹鼠',
+          info: '米娜桑，ここは うわさのはあいしゆ蟹鼠 有时间的话什么事都会干 只要你能想到的 絶対に何も蟹鼠ではない。',
+          qq_number: '2024757871',
+          to: 'https://space.bilibili.com/484843607',
         },
       ],
       notices: [
-        { title: '2022新计划', content: '2022又是新的一年，我们将全力以赴。曈星阁官网、源界、learn、曈星阁家园、曈星阁动画、曈星阁小故事集合……给我干起来吧！' },
-        { title: '2022新计划', content: '2022了，我们要搞个计划' },
+        {
+          title: '2022新计划',
+          content:
+            '2022又是新的一年，我们将全力以赴。<br/>曈星阁官网、源界、learn、曈星阁家园、曈星阁动画、曈星阁小故事集合……给我干起来吧！',
+        },
+        { title: '暑假预示第一个巅峰时期', content: '期待吧！' },
       ],
       show_Positions: [],
     }
@@ -248,6 +310,14 @@ export default {
       this.swiperOption_member.slidesPerView = Math.floor(this.s_width / 300)
     }
     this.newTip()
+    var arr = this.members
+    var len = arr.length
+    for (var i = 0; i < len - 1; i++) {
+      var index = parseInt(Math.random() * (len - i))
+      var temp = arr[index]
+      arr[index] = arr[len - i - 1]
+      arr[len - i - 1] = temp
+    }
   },
   methods: {
     newTip() {
@@ -258,9 +328,9 @@ export default {
       this.tipkey += 1
 
       // 如果已经到了最底部，打乱数组
-      if(this.tipkey >= this.tip.length-1){
-        this.tip.sort(function(){
-          return (0.5-Math.random())
+      if (this.tipkey >= this.tip.length - 1) {
+        this.tip.sort(function () {
+          return 0.5 - Math.random()
         })
         this.tipkey = 0
       }
@@ -275,6 +345,24 @@ export default {
     visit(key) {
       window.open(this.members[key].to)
     },
+  },
+  head() {
+    // 优化seo：动态设置title，keywords 和 description
+    return {
+      title: '曈星阁 官方网站',
+      meta: [
+        {
+          name: 'keywords',
+          content: '曈星阁,兴趣,社团',
+        },
+        // hid是一个唯一标识
+        {
+          hid: 'description',
+          name: 'names',
+          content: '首页',
+        },
+      ],
+    }
   },
 }
 </script>
