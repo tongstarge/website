@@ -242,7 +242,7 @@ export default {
           name: '可可本可',
           info: '<b>擅长体育</b>……更多的还是来曈星阁了解吧~(/▽＼)',
           qq_number: '2357211881',
-          to: '',
+          to: 'https://keke235.github.io/',
         },
         {
           name: 'cx_xigai',
