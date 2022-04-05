@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1984.248" height="1984.25" viewBox="0 0 1984.248 1984.25">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ffb101"/>
+      <stop offset="1" stop-color="#ff7728"/>
+    </linearGradient>
+  </defs>
+  <g id="组_47" data-name="组 47" transform="translate(4364.999 -8100)">
+    <path id="路径_35" data-name="路径 35" d="M850.394,2976.38l236.216,708.66H283.465a141.729,141.729,0,0,1-141.733-141.734V2740.16ZM2125.98,3543.31a141.725,141.725,0,0,1-141.736,141.73H1181.1l236.22-708.66,708.66-236.22ZM738.4,3088.38l151.666,454.99h-606.6a.046.046,0,0,1-.047-.02.062.062,0,0,1-.019-.04v-606.6Zm1245.92,454.93a.074.074,0,0,1-.02.04c-.01.02-.03.02-.05.02h-606.6s104.66-313.96,151.67-454.99l455-151.67ZM850.394,2409.45,141.732,2645.67V1842.52a141.729,141.729,0,0,1,141.734-141.73H1086.61ZM2125.98,2645.67l-708.66-236.22L1181.1,1700.79h803.15a141.725,141.725,0,0,1,141.73,141.736Zm-141.66-196.55-455-151.67-151.67-455h606.6a.076.076,0,0,1,.05.02c.01.02.02.03.02.05v606.6ZM738.4,2297.45l-455,151.67v-606.6a.087.087,0,0,1,.019-.05.077.077,0,0,1,.047-.02h606.6Z" transform="translate(-4506.732 6399.21)" fill-rule="evenodd" fill="url(#linear-gradient)"/>
+    <g id="组_39" data-name="组 39" transform="translate(-8209.212 2352.92)">
+      <path id="路径_36" data-name="路径 36" d="M4836.35,6314.02l114.828,310.347,310.364,114.845-310.364,114.845L4836.35,7164.422,4721.5,6854.058,4411.14,6739.212,4721.5,6624.367Z" fill-rule="evenodd" fill="url(#linear-gradient)"/>
+    </g>
+    <g id="组_40" data-name="组 40" transform="translate(-4435.866 6470.076)">
+      <path id="路径_37" data-name="路径 37" d="M1913.39,3437.01v35.43h-35.44A35.454,35.454,0,0,0,1913.39,3437.01Z" fill-rule="evenodd" fill="url(#linear-gradient)"/>
+    </g>
+    <g id="组_41" data-name="组 41" transform="translate(-4435.866 11714.17)">
+      <path id="路径_38" data-name="路径 38" d="M1913.39-3472.44h-35.44a35.454,35.454,0,0,1,35.44,35.43Z" fill-rule="evenodd" fill="url(#linear-gradient)"/>
+    </g>
+    <g id="组_42" data-name="组 42" transform="translate(-2309.882 11714.17) rotate(180)">
+      <path id="路径_39" data-name="路径 39" d="M1913.39,3472.44h-35.44a35.454,35.454,0,0,0,35.44-35.43Z" fill-rule="evenodd" fill="url(#linear-gradient)"/>
+    </g>
+    <g id="组_43" data-name="组 43" transform="translate(-2309.882 6470.076) rotate(180)">
+      <path id="路径_40" data-name="路径 40" d="M1913.39-3472.44h-35.44a35.454,35.454,0,0,1,35.44,35.43Z" fill-rule="evenodd" fill="url(#linear-gradient)"/>
+    </g>
+  </g>
+</svg>

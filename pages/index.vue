@@ -240,9 +240,15 @@ export default {
         },
         {
           name: '可可本可',
-          info: '小阳的助手，负责处理曈星阁的法务相关事务。更多的还是来曈星阁了解吧~(/▽＼)',
+          info: '曈星阁的法律顾问，自然是懂法律的人。然后还<b>擅长体育</b>……更多的还是来曈星阁了解吧~(/▽＼)',
           qq_number: '2357211881',
           to: '',
+        },
+        {
+          name: 'cx_xigai',
+          info: '：瞳星阁摸鱼者，擅长潜水（bushi），<b>搞音乐。成绩还挺好</b>。最近在做的事：跟朋友做云电脑软件。',
+          qq_number: '3013749697',
+          to: 'https://121.5.162.208',
         },
         {
           name: '喵茶九尾',
@@ -304,7 +310,7 @@ export default {
     }
   },
   mounted() {
-    window.addEventListener('scroll', this.getTop)
+    window.addEventListener('scroll', this.getTop,true)
     window.onresize = () => {
       return (() => {
         this.s_width = document.body.clientWidth
