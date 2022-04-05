@@ -249,6 +249,11 @@ export default {
           info: '<b>曈星阁绘画家协会会长</b>，曈星阁的吉祥物和其他角色的设计都出自她手。<br/>兴趣爱好嘛，当然是绘画了呀！',
           qq_number: '3353857668',
           to: 'https://space.bilibili.com/670277332',
+        },{
+          name: '万有引力',
+          info: '自我介绍：一条有梦想的咸鱼，<b>爱好编程绘画音乐</b>，渴望改变世界但是摆烂真爽，算了，还是努努力吧',
+          qq_number: '941306008',
+          to:'https://space.bilibili.com/1088931406',
         },
         {
           name: '箱子-BOX',
