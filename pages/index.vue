@@ -112,7 +112,7 @@
         title="图片来源于网络，如有侵权请联系我们，谢谢！"
       >
         <div class="home-tip-content" v-show="tip_show" @click="newTip">
-          <h2 style="text-align: center;">{{ tip[tipkey] }}</h2>
+          <h2 style="text-align: center;">{{ tip[tipkey] }}</h2> 
         </div>
       </div>
       <Footer />
