@@ -4,7 +4,7 @@ const fastify = require('fastify')({
 const fs = require('fs');
 
 fastify.get('/', function (request, reply) {
-    const web = fs.readFileSync('index.html','utf-8')
+    const web = fs.readFileSync('./index.html','utf-8')
     reply.type('text/html').send(web)
 })
 
