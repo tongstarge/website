@@ -6,12 +6,17 @@ const path = require('path');
 
 fastify.get('/', function (request, reply) {
     const file = path.join(process.cwd(), 'app', 'index.html');
-    const web = readFileSync(file,'utf-8')
+    const web = readFileSync(file, 'utf-8')
     reply.type('text/html').send(web)
 })
+/*fastify.get('/image/*', function (request, reply) {
+    const file = path.join(process.cwd(), 'app', request.url);
+    const files = readFileSync(file)
+    reply.type('image/x-icon').send(files)
+})*/
 fastify.get('*', function (request, reply) {
     const file = path.join(process.cwd(), 'app', '404.html');
-    const web = readFileSync(file,'utf-8')
+    const web = readFileSync(file, 'utf-8')
     reply.type('text/html').send(web)
 })
 
