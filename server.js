@@ -13,17 +13,19 @@ fastify.register(fastifyStatic, {
     prefix: '/static/',
     decorateReply: false
 })
+/*
 fastify.get('*',function (request, reply) {
     reply.sendFile('building.html');
 })
-/*
+*/
+
 fastify.get('/', function (request, reply) {
     reply.sendFile('index.html');
 })
 
 fastify.get('*', function (request, reply) {
     reply.sendFile('404.html');
-})*/
+})
 
 fastify.listen({ port: 3000 }, function (err, address) {
     if (err) {
