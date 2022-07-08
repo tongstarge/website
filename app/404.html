@@ -1,13 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/static/image/logo.svg" type="image/x-icon">
-    <title>404——曈星阁官网</title>
+    <title>404--曈星阁官网</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: '思源宋体';
+        }
+        body{
+            height: 100vh;
+            background-color: #ffb101;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            text-align: center;
+            width: 408px;
+            font-family: "Microsoft YaHei";
+            color: #eedeb0;
+        }
+        @keyframes text {
+            0%,10%{
+                transform: translateY(50px) scale(0.9);
+                opacity: 0;
+            }
+            100%{
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+        }
+        @keyframes text2 {
+            0%,15%{
+                opacity: 0;
+                transform: scale(1.5);
+            }
+            100%{
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .container h1 {
+            color: #3d3b4f;
+            font-size: 200px;
+            letter-spacing: 5px;
+            animation: text 1s cubic-bezier(0.45, -0.21, 0.13, 1.16);
+        }
+        .container p {
+            letter-spacing: 3px;
+            font-size: 18px;
+            margin-top: 30px;
+            line-height: 40px;
+            animation: text 1s cubic-bezier(0.45, -0.21, 0.13, 1.16);
+        }
+
+        *::selection{
+            background-color: #e08b5a26;
+        }
+    </style>
 </head>
+
 <body>
-    404
+    <div class="container">
+        <h1>404</h1>
+        <p>您要找的东西不见了...</p>
+    </div>
 </body>
+
 </html>
