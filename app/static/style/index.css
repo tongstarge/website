@@ -1,20 +1,19 @@
 @font-face {
-    font-family: '思源宋体';
-    src: local('思源宋体'),url(/static/font/思源宋体SC-Blod.otf) format('opentype');
-    font-family: bold bolder;
+  font-family: "思源宋体";
+  src: url(/static/font/思源宋体SC-Light.otf);
 }
 @font-face {
-    font-family: '思源宋体';
-    src: local('思源宋体'),url(/static/font/思源宋体SC-Light.otf) format('opentype');
-    font-family: light;
+  font-family: "思源宋体";
+  src: url(/static/font/思源宋体SC-Bold.otf);
+  font-family: bolder;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    font-family: '思源宋体';
+  margin: 0;
+  padding: 0;
+  font-family: "思源宋体";
 }
 
 *::selection {
-    background-color: #e08b5a26;
+  background-color: #e08b5a26;
 }
