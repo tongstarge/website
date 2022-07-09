@@ -6,42 +6,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/static/image/logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="/static/style/index.css">
     <title>404--曈星阁官网</title>
     <style>
-        *{
-            margin: 0;
-            padding: 0;
-            font-family: '思源宋体';
-        }
-        body{
+        body {
             height: 100vh;
             background-color: #ffb101;
             display: flex;
             align-items: center;
             justify-content: center;
         }
+
         .container {
             text-align: center;
             width: 408px;
             font-family: "Microsoft YaHei";
             color: #eedeb0;
         }
+
         @keyframes text {
-            0%,10%{
+
+            0%,
+            10% {
                 transform: translateY(50px) scale(0.9);
                 opacity: 0;
             }
-            100%{
+
+            100% {
                 transform: translateY(0) scale(1);
                 opacity: 1;
             }
         }
+
         @keyframes text2 {
-            0%,15%{
+
+            0%,
+            15% {
                 opacity: 0;
                 transform: scale(1.5);
             }
-            100%{
+
+            100% {
                 opacity: 1;
                 transform: scale(1);
             }
@@ -49,29 +54,81 @@
 
         .container h1 {
             color: #3d3b4f;
-            font-size: 200px;
+            font-size: 100px;
             letter-spacing: 5px;
             animation: text 1s cubic-bezier(0.45, -0.21, 0.13, 1.16);
+            user-select: none;
         }
+
         .container p {
             letter-spacing: 3px;
             font-size: 18px;
             margin-top: 30px;
             line-height: 40px;
-            animation: text 1s cubic-bezier(0.45, -0.21, 0.13, 1.16);
-        }
-
-        *::selection{
-            background-color: #e08b5a26;
+            animation: text 1.5s cubic-bezier(0.45, -0.21, 0.13, 1.16);
         }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <h1>404</h1>
-        <p>您要找的东西不见了...</p>
+        <h1 id="h">404</h1>
+        <p id="p">您要找的东西不见了...</p>
     </div>
+    <script>
+        const o = document.getElementById('p');
+        const os = document.getElementById('h');
+        let t = false;
+        let p = false;
+        function enter() {
+            os.style.transition = '0.2s cubic-bezier(0.68, -0.55, 0.27, 1.55)';
+            o.style.transition = '0.2s cubic-bezier(0.68, -0.55, 0.27, 1.55)';
+        }
+        function move_m(e) {
+            os.style.transition = '';
+            o.style.transition = '';
+            let x = (e.x - (o.offsetLeft + 448 / 2));
+            let y = (e.y - (o.offsetTop + 114 / 2));
+            os.style.transform = ("translateX(" + Math.floor(x * 0.05) + "px) translateY(" + Math.floor(y * 0.05) + "px)");
+            o.style.transform = ("translateX(" + Math.floor(x * -0.01) + "px) translateY(" + Math.floor(y * -0.01) + "px)");
+        }
+        function leave() {
+            os.style.transition = '0.2s cubic-bezier(0.68, -0.55, 0.27, 1.55)';
+            o.style.transition = '0.2s cubic-bezier(0.68, -0.55, 0.27, 1.55)';
+            os.style.transform = '';
+            o.style.transform = '';
+        }
+        //电脑端应该先点击触发才开始
+        document.body.onclick = () => {
+            if (!p) {
+                t = !t;
+                if (t) {
+                    document.body.addEventListener("mouseenter", enter, true)
+                    document.body.addEventListener("mousemove", move_m, true)
+                    document.body.addEventListener("mouseleave", leave, true);
+                } else {
+                    document.body.removeEventListener("mouseenter", enter, true);
+                    document.body.removeEventListener("mousemove", move_m, true);
+                    document.body.removeEventListener("mouseleave", leave, true);
+                    leave();
+                }
+            }
+        }
+
+        document.body.addEventListener("touchstart", () => {
+            p = true;
+            enter();
+        })
+        document.body.addEventListener("touchmove", (e) => {
+            os.style.transition = '';
+            o.style.transition = '';
+            let x = (e.targetTouches[0].pageX - (o.offsetLeft + 448 / 2));
+            let y = (e.targetTouches[0].pageY - (o.offsetTop + 114 / 2));
+            os.style.transform = ("translateX(" + Math.floor(x * 0.05) + "px) translateY(" + Math.floor(y * 0.05) + "px)");
+            o.style.transform = ("translateX(" + Math.floor(x * -0.01) + "px) translateY(" + Math.floor(y * -0.01) + "px)");
+        })
+        document.body.addEventListener("touchend", leave)
+    </script>
 </body>
 
 </html>
