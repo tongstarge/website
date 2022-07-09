@@ -1,17 +1,17 @@
 @font-face {
-  font-family: "s";
-  src: url(/static/font/SC-Light.otf);
+  font-family: "思源宋体";
+  src: url(http://lc-RRSyJJ2C.cn-n1.lcfile.com/tcfQgjjbspWeyJGlU26YyjyVAV0qBM1W/SC-Light.otf);
 }
 @font-face {
-  font-family: "s";
-  src: url(/static/font/SC-Bold.otf);
+  font-family: "思源宋体";
+  src: url(http://lc-RRSyJJ2C.cn-n1.lcfile.com/Q7GXPrj4kyxLfYSRy9FWxnygUQtaUkla/SC-Bold.otf);
   font-family: bolder;
 }
 
 * {
   margin: 0;
   padding: 0;
-  font-family: "s";
+  font-family: "思源宋体";
 }
 
 *::selection {
