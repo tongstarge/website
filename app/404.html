@@ -118,7 +118,7 @@
         document.body.addEventListener("touchstart", () => {
             p = true;
             enter();
-        })
+        },{ passive: false })
         document.body.addEventListener("touchmove", (e) => {
             os.style.transition = '';
             o.style.transition = '';
@@ -126,9 +126,8 @@
             let y = (e.targetTouches[0].pageY - (o.offsetTop + 114 / 2));
             os.style.transform = ("translateX(" + Math.floor(x * 0.05) + "px) translateY(" + Math.floor(y * 0.05) + "px)");
             o.style.transform = ("translateX(" + Math.floor(x * -0.01) + "px) translateY(" + Math.floor(y * -0.01) + "px)");
-            e.preventDefault()
-        })
-        document.body.addEventListener("touchend", leave)
+        },{ passive: false })
+        document.body.addEventListener("touchend", leave,{ passive: false });
     </script>
 </body>
 
