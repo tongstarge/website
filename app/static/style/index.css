@@ -1,11 +1,11 @@
 @font-face {
     font-family: '思源宋体';
-    src: local('思源宋体') url(/static/font/思源宋体SC-Blod.otf);
+    src: local('思源宋体'),url(/static/font/思源宋体SC-Blod.otf) format('opentype');
     font-family: bold bolder;
 }
 @font-face {
     font-family: '思源宋体';
-    src: local('思源宋体')  url(/static/font/思源宋体SC-Light.otf);
+    src: local('思源宋体'),url(/static/font/思源宋体SC-Light.otf) format('opentype');
     font-family: light;
 }
 
