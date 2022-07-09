@@ -1,10 +1,10 @@
 @font-face {
   font-family: "s";
-  src: url(/static/font/思源宋体SC-Light.otf);
+  src: url(/static/font/SC-Light.otf);
 }
 @font-face {
   font-family: "s";
-  src: url(/static/font/思源宋体SC-Bold.otf);
+  src: url(/static/font/SC-Bold.otf);
   font-family: bolder;
 }
 
