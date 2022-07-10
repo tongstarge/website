@@ -1,21 +1,21 @@
 @font-face {
   font-family: "思源宋体";
-  src: local('思源宋体'),local('思源宋体 CN'),url(https://old.coco-central.cn/static/font/SourceHanSerifCN-Medium-6.woff2),url(https://old.coco-central.cn/static/font/SiYuanSongTiRegular/SourceHanSerifCN-Medium-6.ttf);
+  src: url(https://old.coco-central.cn/static/font/SourceHanSerifCN-Medium-6.woff2),url(https://old.coco-central.cn/static/font/SiYuanSongTiRegular/SourceHanSerifCN-Medium-6.ttf);
 }
 @font-face {
   font-family: "思源宋体";
   font-weight: lighter;
-  src: local('思源宋体'),local('思源宋体 CN'),url(https://old.coco-central.cn/static/font/SourceHanSerifCN-Light-5.woff2),url(https://old.coco-central.cn/static/font/SiYuanSongTiRegular/SourceHanSerifCN-Light-5.ttf);
+  src: url(https://old.coco-central.cn/static/font/SourceHanSerifCN-Light-5.woff2),url(https://old.coco-central.cn/static/font/SiYuanSongTiRegular/SourceHanSerifCN-Light-5.ttf);
 }
 @font-face {
   font-family: "思源宋体";
   font-weight: bold;
-  src: local('思源宋体'),local('思源宋体 CN'),url(https://old.coco-central.cn/static/font/SourceHanSerifCN-Bold-2.woff2),url(https://old.coco-central.cn/static/font/SiYuanSongTiRegular/SourceHanSerifCN-Bold-2.ttf);
+  src: url(https://old.coco-central.cn/static/font/SourceHanSerifCN-Bold-2.woff2),url(https://old.coco-central.cn/static/font/SiYuanSongTiRegular/SourceHanSerifCN-Bold-2.ttf);
 }
 @font-face {
   font-family: "思源宋体";
   font-weight: bolder;
-  src: local('思源宋体'),local('思源宋体 CN'),url(https://old.coco-central.cn/static/font/SourceHanSerifCN-Bold-2.woff2),url(https://old.coco-central.cn/static/font/SiYuanSongTiRegular/SourceHanSerifCN-Bold-2.ttf);
+  src: url(https://old.coco-central.cn/static/font/SourceHanSerifCN-Bold-2.woff2),url(https://old.coco-central.cn/static/font/SiYuanSongTiRegular/SourceHanSerifCN-Bold-2.ttf);
 }
 /*感谢coco的支持！*/
 
