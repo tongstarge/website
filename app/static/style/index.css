@@ -1,27 +1,13 @@
 @font-face {
-  font-family: "思源宋体";
-  src: local("思源宋体"),local("思源宋体 CN"), url("https://ftp.tongstarge.cn/SourceHanSerifCN-Medium-6.otf");
+  font-family: "s";
+  src: url(/static/font/S-M.woff2);
 }
-@font-face {
-  font-family: "思源宋体";
-  src: local("思源宋体"),local("思源宋体 CN"), url("https://ftp.tongstarge.cn/SourceHanSerifCN-Light-5.otf");
-  font-weight: lighter;
-}
-@font-face {
-  font-family: "思源宋体";
-  src: local("思源宋体"),local("思源宋体 CN"), url("https://ftp.tongstarge.cn/SourceHanSerifCN-Bold-2.otf");
-  font-weight: bold;
-}
-@font-face {
-  font-family: "思源宋体";
-  src: local("思源宋体"),local("思源宋体 CN"), url("https://ftp.tongstarge.cn/SourceHanSerifCN-Heavy-4.otf");
-  font-weight: bolder;
-}
+
 
 * {
   margin: 0;
   padding: 0;
-  font-family: "思源宋体";
+  font-family: "s";
 }
 
 *::selection {
