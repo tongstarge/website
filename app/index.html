@@ -441,6 +441,15 @@
             },
             scale: 3,
         });
+        gsap.to(".cover-object", {
+            scrollTrigger: {
+                trigger: "#ov",
+                start: (window.innerWidth * -0.1 + "px 100%"),
+                scrub: true,
+                toggleActions: "restart none none none"
+            },
+            scale: 0.5,
+        });
         gsap.to("#v", {
             scrollTrigger: {
                 trigger: "#v",
