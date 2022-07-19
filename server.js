@@ -27,9 +27,14 @@ fastify.get('*', function (request, reply) {
     reply.sendFile('404.html');
 })
 
-fastify.listen({ port: 3000 }, function (err, address) {
-    if (err) {
+const start = async () => {
+    try {
+        const p = 3000;
+        await fastify.listen({ port: p })
+        console.log('启动:http://localhost:' + p + '/')
+    } catch (err) {
         fastify.log.error(err)
         process.exit(1)
     }
-})
+}
+start()
